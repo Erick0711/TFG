@@ -16,7 +16,7 @@
             <input type="search" class="search p-1 border-secondary rounded w-25" placeholder="Buscar">
 
             <div class="text-center">
-            <a href="" type="button" class="btn btn-primary p-1" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user-plus fa-3x"></i></a>
+            <a href="" type="button" class="btn btn-primary p-1" data-toggle="modal" data-target="#registrarModal"><i class="fa fa-user-plus fa-3x"></i></a>
             </div>
             </div>
             <div class="table-responsive">
@@ -43,7 +43,7 @@
                     <td>4</td>
                     <td>1</td>
                     <td>
-                      <a href="" class="btn btn-warning-2"><i class="fa fa-pencil-square"></i></a>
+                      <a href="" class="btn btn-warning-2" data-toggle="modal" data-target="#editarModal"><i class="fa fa-pencil-square"></i></a>
                       <a href="" class="btn btn-danger"><i class="fa fa-trash fa-3x"></i></a>
                   </td>
                   </tr>
@@ -110,5 +110,5 @@
         </div>
       </div>
     </main>
-    <?php include("./Modal/nuevo.php"); ?> 
+    <?php include("./Modal/copropietario_modal.php"); ?> 
     <?php include("./plantilla/footer.php"); ?> 
