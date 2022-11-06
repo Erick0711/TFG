@@ -1,4 +1,7 @@
-<?php include("./plantilla/header.php"); ?>
+<?php
+require($_SERVER['DOCUMENT_ROOT']."/TFG/App/Modelo/Persona.php"); 
+include("./plantilla/header.php"); 
+?>
     <main class="app-content">
       <div class="app-title">
         <div>
@@ -26,6 +29,7 @@
                     <th>NOMBRE</th>
                     <th>APELLIDO</th>
                     <th>CI</th>
+                    <th>COMPLEMENTO CI</th>
                     <th>TELEFONO</th>
                     <th>APARTAMENTO</th>
                     <th>RESIDENTES</th>
@@ -34,75 +38,22 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <?php foreach($personas as $persona){ ?>
                   <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>6897451</td>
-                    <td>105</td>
-                    <td>4</td>
-                    <td>1</td>
+                    <td><?php echo $persona['nombre'] ;?></td>
+                    <td><?php echo $persona['apellido'] ;?></td>
+                    <td><?php echo $persona['ci'] ;?></td>
+                    <td><?php echo $persona['complemento_ci'] ;?></td>
+                    <td><?php echo $persona['telefono'] ;?></td>
+                    <td><?php echo $persona['apellido'] ;?></td>
+                    <td><?php echo $persona['apellido'] ;?></td>
+                    <td><?php echo $persona['apellido'] ;?></td>
                     <td>
                       <a href="" class="btn btn-warning-2" data-toggle="modal" data-target="#editarModal"><i class="fa fa-pencil-square"></i></a>
                       <a href="" class="btn btn-danger"><i class="fa fa-trash fa-3x"></i></a>
                   </td>
                   </tr>
-
-                  <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>6897451</td>
-                    <td>105</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>
-                      <a href="" class="btn btn-warning-2"><i class="fa fa-pencil-square"></i></a>
-                      <a href="" class="btn btn-danger"><i class="fa fa-trash fa-3x"></i></a>
-                  </td>
-                  </tr>
-
-                  <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>6897451</td>
-                    <td>105</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>
-                      <a href="" class="btn btn-warning-2"><i class="fa fa-pencil-square"></i></a>
-                      <a href="" class="btn btn-danger"><i class="fa fa-trash fa-3x"></i></a>
-                  </td>
-                  </tr>
-
-                  <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>6897451</td>
-                    <td>105</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>
-                      <a href="" class="btn btn-warning-2"><i class="fa fa-pencil-square"></i></a>
-                      <a href="" class="btn btn-danger"><i class="fa fa-trash fa-3x"></i></a>
-                  </td>
-                  </tr>
-
-                  <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>6897451</td>
-                    <td>105</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>
-                      <a href="" class="btn btn-warning-2"><i class="fa fa-pencil-square"></i></a>
-                      <a href="" class="btn btn-danger"><i class="fa fa-trash fa-3x"></i></a>
-                  </td>
-                  </tr>
+                  <?php };?>
                 </tbody>
               </table>
             </div>
