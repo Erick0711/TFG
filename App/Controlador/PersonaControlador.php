@@ -1,9 +1,9 @@
 <?php
-namespace App\Controllers;
-use App\Models\Conexion;
+namespace App\Controlador;
+use App\BD\Conexion;
 use PDO;
-class DistribuidorController extends Conexion{
-    public function DistribuidorController()
+class PersonaControlador extends Conexion{
+    public function PersonaControlador()
     {
         parent::__construct();
     }

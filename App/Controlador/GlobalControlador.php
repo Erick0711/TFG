@@ -1,9 +1,9 @@
 <?php
-namespace App\Controllador;
-use App\Conexion\Conexion;
+namespace App\Controlador;
+use App\BD\Conexion;
 use PDO;
-class GlobalControllador extends Conexion{
-    public function GlobalControllador()
+class GlobalControlador extends Conexion{
+    public function GlobalControlador()
     {
         parent::__construct();
     }
