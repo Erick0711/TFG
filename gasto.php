@@ -27,24 +27,32 @@
               <table class="table table-bordered">
                 <thead class="text-center">
                   <tr>
+                    <th>#</th>
                     <th>TIPO GASTO</th>
                     <th>DESCRIPCION</th>
                     <th>MONTO</th>
+                    <th></th>
                     <th>ACCIONES</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach($gastos as $gasto){?>
+                  <?php foreach($gastos as $gasto){
+                  if($gasto['estado'] == 1){
+                  ?>
                   <tr>
+                    <td><?php echo $gasto['id']?></td>
                     <td><?php echo $gasto['nombre']?></td>
                     <td><?php echo $gasto['descripcion']?></td>
-                    <td><?php echo $gasto['monto_gasto']?> BS</td>
+                    <td><?php echo $gasto['monto_gasto']?></td>
+                    <th>BS</th>
                     <td>
-                      <a href="" class="btn btn-warning-2" data-toggle="modal" data-target="#editarModal"><i class="fa fa-pencil-square"></i></a>
-                      <a href="" class="btn btn-danger"><i class="fa fa-trash fa-3x"></i></a>
+                      <a class="btn btn-warning-2 editarbtn" data-toggle="modal" data-target="#editarModalGasto"><i class="fa fa-pencil-square"></i></a>
+                      <a href="./App/Modelo/Gasto.php?eliminar=<?php echo $gasto['id'] ;?>" class="btn btn-danger" name="eliminar" ><i class="fa fa-trash fa-3x"></i></a>
                   </td>
                   </tr>
-                  <?php };?>
+                  <?php 
+                    };
+                  };?>
                 </tbody>
               </table>
             </div>
@@ -55,3 +63,4 @@
     <?php include("./Modal/gasto_modal.php"); ?> 
     <?php include("./Modal/tipo_gasto_modal.php"); ?> 
     <?php include("./plantilla/footer.php"); ?> 
+

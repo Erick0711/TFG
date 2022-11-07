@@ -59,8 +59,8 @@
             <li><a class="treeview-item" href="./copropietario.php"><i class="icon fa fa-circle-o"></i> Copropietario</a></li>
             <li><a class="treeview-item" href="./funcionario.php"><i class="icon fa fa-circle-o"></i> Funcionario</a></li>
             <li><a class="treeview-item" href="./usuario.php"><i class="icon fa fa-circle-o"></i> Usuario</a></li>
-            <li><a class="treeview-item" href="./articulo.php"><i class="icon fa fa-circle-o"></i> Gasto</a></li>
-            <li><a class="treeview-item" href="./gasto.php"><i class="icon fa fa-circle-o"></i> Artículo</a></li>
+            <li><a class="treeview-item" href="./gasto.php"><i class="icon fa fa-circle-o"></i> Gasto</a></li>
+            <li><a class="treeview-item" href="./articulo.php"><i class="icon fa fa-circle-o"></i> Artículo</a></li>
           </ul>
         </li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Tablas</span><i class="treeview-indicator fa fa-angle-right"></i></a>

@@ -16395,7 +16395,7 @@ be a descendant of the grid when it is being dragged.
   position: relative;
   min-width: 350px;
   min-height: 390px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
   -webkit-perspective: 800px;
@@ -16403,6 +16403,8 @@ be a descendant of the grid when it is being dragged.
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  border-radius: 0.5rem;
+  box-shadow: 2px 10px 10px 2px rgba(0, 0, 0, 0.5);
 }
 
 .login-content .login-box .login-head {
@@ -16414,7 +16416,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .login-content .login-box label {
-  color: #666;
+  color: #ffe;
   font-weight: 700;
 }
 

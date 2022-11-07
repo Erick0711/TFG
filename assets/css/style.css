@@ -1,11 +1,14 @@
 .title-item{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 1rem;
 }
 .btn-warning-2{
     color: #fffe;
     background-color: #ffc107;
     border-color: #ffc107;
+}
+.logo-siac{
+    width: 12.5rem;
 }
