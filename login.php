@@ -7,6 +7,7 @@
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login - Vali Admin</title>
@@ -16,22 +17,23 @@
       <div class="cover"></div>
     </section>
     <section class="login-content">
-      <div class="login-box">
-        <form class="login-form" action="index.html">
-        <div class="logo d-flex justify-content-center">
-        <img src="./assets/img/logo-nuevo.png" alt="Logo-SIAC" class="logo-siac">
-      </div>
+      <div class="login-box animate__animated animate__fadeInDown">
+
+        <form class="login-form" action="./App/Modelo/Rol.php" method="POST">
+          <div class="logo d-flex justify-content-center">
+            <img src="./assets/img/logo-nuevo.png" alt="Logo-SIAC" class="logo-siac">
+          </div>
           <div class="form-group">
             <label class="control-label">Usuario:</label>
-            <input class="form-control" type="text" placeholder="..." autofocus>
+            <input class="form-control" name="usuario" type="text" placeholder="ejemplo0541@gmail.com">
           </div>
           <div class="form-group">
             <label class="control-label">Contraseña:</label>
-            <input class="form-control" type="password" placeholder="...">
+            <input class="form-control" name="contrasenia" type="password" placeholder="•••••••••">
           </div>
         
           <div class="form-group btn-container">
-            <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>Ingresar</button>
+            <button type="submit" name="iniciarSesion" class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>Ingresar</button>
           </div>
         </form>
     
