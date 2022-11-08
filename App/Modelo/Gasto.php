@@ -1,11 +1,11 @@
 <?php 
 require($_SERVER['DOCUMENT_ROOT']."/TFG/autoload.php");
-use  App\Controlador\PersonaControlador;
-    $consulta = new PersonaControlador();
+use  App\Controlador\GlobalControlador;
+    $consulta = new GlobalControlador();
 
     // CONSULTAS LISTAR LOS DATOS
     $tipos = $consulta->index("SELECT * FROM tipo_gasto");
-    $gastos = $consulta->index("SELECT tipo_gasto.nombre, gasto.id, gasto.descripcion, gasto.monto_gasto, gasto.estado FROM tipo_gasto INNER JOIN gasto on tipo_gasto.id = gasto.id_tipo_gasto;");
+    $gastos = $consulta->index("SELECT tipo_gasto.nombre, gasto.id, gasto.descripcion, gasto.monto_gasto, gasto.estado FROM tipo_gasto INNER JOIN gasto on tipo_gasto.id = gasto.id_tipo_gasto");
 
     // CONSULTAS GUARDAR DATOS
     if(isset($_POST['guardar'])){

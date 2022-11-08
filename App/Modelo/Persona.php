@@ -1,7 +1,7 @@
 <?php 
 require($_SERVER['DOCUMENT_ROOT']."/TFG/autoload.php");
-use  App\Controlador\PersonaControlador;
-    $consulta = new PersonaControlador();
+use  App\Controlador\GlobalControlador;
+    $consulta = new GlobalControlador();
     
     // if(isset($_POST['guardar'])){
     //     $nombre = $_POST['nombre'];

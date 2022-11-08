@@ -9,21 +9,19 @@ class PersonaControlador extends Conexion{
     }
     public function index($sql){
         $sentencia = $this->conexion->prepare($sql);
+        if($sentencia->execute();){
+            $lastInsertId = $this->conexion->lastInsertId();
+        }else{
+            $lastInsertId = 0;
+            echo $sentencia->errorInfo()[2];
+        }
+        $registros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        return $registros;
+    }
+    public function index2($sql){
+        $sentencia = $this->conexion->prepare($sql);
         $sentencia->execute();
         $registros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
         return $registros;
     }
-    public function eliminar($sql){
-        $sentencia = $this->conexion->prepare($sql);
-        $sentencia->execute();
-        $registros = $sentencia->fetch();
-        return $registros;
-    }
-    public function editar($sql){
-        $sentencia = $this->conexion->prepare($sql);
-        $sentencia->execute();
-        $registros = $sentencia->fetch(PDO::FETCH_LAZY);
-        return $registros;
-    }
 }
-?>
