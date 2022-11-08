@@ -1,3 +1,4 @@
+<?php include("./plantilla/iniciar_session.php");?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +10,7 @@
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -28,7 +30,7 @@
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
             <!-- <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li> -->
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Perfil</a></li>
-            <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href="./plantilla/eliminar_session.php"><i class="fa fa-sign-out fa-lg"></i> Cerrar Sesión</a></li>
           </ul>
         </li>
       </ul>
@@ -38,8 +40,8 @@
     <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="./assets/img/Logo-siac.jpg" alt="User Image">
         <div>
-          <p class="app-sidebar__user-name">SIAC</p>
-          <p class="app-sidebar__user-designation">Admin</p>
+          <p class="app-sidebar__user-name"><?php echo $_SESSION['nombre_rol']?></p>
+          <p class="app-sidebar__user-designation"><?php echo $_SESSION['nombre_rol']?></p>
         </div>
       </div>
       <!-- LISTA DE MENU -->
@@ -56,11 +58,16 @@
         <!-- <li><a class="app-menu__item" href="charts.html"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Charts</span></a></li> -->
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Formularios</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
+          <?php if($_SESSION['nombre_rol'] == "SIAC") {?>
             <li><a class="treeview-item" href="./copropietario.php"><i class="icon fa fa-circle-o"></i> Copropietario</a></li>
             <li><a class="treeview-item" href="./funcionario.php"><i class="icon fa fa-circle-o"></i> Funcionario</a></li>
             <li><a class="treeview-item" href="./usuario.php"><i class="icon fa fa-circle-o"></i> Usuario</a></li>
             <li><a class="treeview-item" href="./gasto.php"><i class="icon fa fa-circle-o"></i> Gasto</a></li>
             <li><a class="treeview-item" href="./articulo.php"><i class="icon fa fa-circle-o"></i> Artículo</a></li>
+            <?php }else{?>
+            <li><a class="treeview-item" href="./gasto.php"><i class="icon fa fa-circle-o"></i> Gasto</a></li>
+            <li><a class="treeview-item" href="./articulo.php"><i class="icon fa fa-circle-o"></i> Artículo</a></li>
+            <?php }?>
           </ul>
         </li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Tablas</span><i class="treeview-indicator fa fa-angle-right"></i></a>
