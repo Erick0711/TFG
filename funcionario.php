@@ -1,4 +1,8 @@
 <?php include("./plantilla/header.php"); ?>
+<?php if($sesion != "SIAC"){
+    echo "<script> window.location.href =  './plantilla/eliminar_session.php';</script>";
+  }else{?>
+  
     <main class="app-content">
       <div class="app-title">
         <div>
@@ -55,3 +59,5 @@
     </main>
     <?php include("./Modal/funcionario_modal.php"); ?> 
     <?php include("./plantilla/footer.php"); ?> 
+
+    <?php };?>

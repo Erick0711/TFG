@@ -35,8 +35,8 @@
         </form>
         </div>
     <!-- FIN CONTENIDO DEL MODAL -->
-    <table class="table table-bordered mt-5">
-        <thead class="table-dark">
+    <table class="table table-bordered mt-5 table-sm">
+        <thead class="table-dark text-center">
             <th>#</th>
             <th>TIPOS DE GASTO</th>
         </thead>

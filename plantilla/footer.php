@@ -24,7 +24,7 @@
 						"registros por página",
 						"ZeroRecords": "Nada encontrado",
 						"info": "Página _PAGE_ de _PAGES_",
-						"infoEmpty": "No recors available",
+						"infoEmpty": "Ningun dato encontrado",
 						"infoFiltered": "(Filtrado de _MAX_ registro totales)",
 						'search': 'Buscar:',
 						'paginate':{

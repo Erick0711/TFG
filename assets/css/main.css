@@ -2619,14 +2619,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #FFF;
-  background-color: #2571B4;
-  border-color: #2571B4;
+  background-color: #719b2f;
+  border-color: #719b2f;
 }
 
 .btn-primary:hover {
   color: #FFF;
-  background-color: #155994;
-  border-color: #155994;
+  background-color: #82ae3a;
+  border-color: #82ae3a;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -14924,7 +14924,7 @@ be a descendant of the grid when it is being dragged.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #009688;
+  background-color: #27649A;;
   z-index: 1030;
   padding-right: 15px;
 }
@@ -14961,7 +14961,7 @@ be a descendant of the grid when it is being dragged.
             flex: 0 0 auto;
     display: block;
     width: 230px;
-    background-color: #007d71;
+    background-color: #1F4D76;
   }
 }
 
@@ -14995,7 +14995,7 @@ be a descendant of the grid when it is being dragged.
 
 .app-sidebar__toggle:focus, .app-sidebar__toggle:hover {
   color: #fff;
-  background-color: #00635a;
+  background-color: #1F4D76;
   text-decoration: none;
 }
 
@@ -15162,9 +15162,9 @@ be a descendant of the grid when it is being dragged.
   width: 230px;
   overflow: auto;
   z-index: 10;
-  background-color: #222d32;
-  -webkit-box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+  background-color: #081a2b;
+  -webkit-box-shadow: 0px 8px 17px rgba(78, 75, 75, 0.21);
+          box-shadow: 0px 8px 17px rgba(78, 75, 75, 0.21);
   -webkit-transition: left 0.3s ease,
  width 0.3s ease;
   -o-transition: left 0.3s ease,
@@ -15257,8 +15257,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .app-menu__item.active, .app-menu__item:hover, .app-menu__item:focus {
-  background: #0d1214;
-  border-left-color: #009688;
+  background: #1F4D76;
+  border-left-color: #fff;
   text-decoration: none;
   color: #fff;
 }
@@ -15279,7 +15279,7 @@ be a descendant of the grid when it is being dragged.
 
 .treeview.is-expanded [data-toggle='treeview'] {
   border-left-color: #009688;
-  background: #0d1214;
+  background: #1F4D76;
 }
 
 .treeview.is-expanded .treeview-menu {
@@ -15298,7 +15298,7 @@ be a descendant of the grid when it is being dragged.
   -webkit-transition: max-height 0.3s ease;
   -o-transition: max-height 0.3s ease;
   transition: max-height 0.3s ease;
-  background: #2a383e;
+  background: #1F4D76DE;;
 }
 
 .treeview-item {
@@ -15314,7 +15314,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .treeview-item.active, .treeview-item:hover, .treeview-item:focus {
-  background: #0d1214;
+  background: #b5b7b042;
   text-decoration: none;
   color: #fff;
 }
@@ -15341,8 +15341,8 @@ be a descendant of the grid when it is being dragged.
     display: none;
   }
   .sidebar-mini.sidenav-toggled .app-sidebar__user-avatar {
-    width: 30px;
-    height: 30px;
+    max-width: 33px;
+    min-height: 33px;
   }
   .sidebar-mini.sidenav-toggled .app-content {
     margin-left: 50px;

@@ -2,21 +2,22 @@
   require($_SERVER['DOCUMENT_ROOT']."/TFG/App/Modelo/Gasto.php"); 
   include("./plantilla/header.php"); 
   ?>
-    <main class="app-content">
+  <?php if($sesion != "SIAC"){
+    echo "<script> window.location.href =  './plantilla/eliminar_session.php';</script>";
+  }else{?>
+  
+  <main class="app-content">
       <div class="app-title">
         <div>
           <h1><i class="fa fa-th-list"></i> Gasto</h1>
           <p></p>
         </div>
       </div>
-      
       <div class="row">
         <div class="clearfix"></div>
         <div class="col-md-12">
           <div class="tile">
             <div class="title-item">
-
-            <input type="search" class="search p-1 border-secondary rounded w-25" placeholder="Buscar">
 
             <div class="text-center">
             <a href="" type="button" class="btn btn-primary p-1" data-toggle="modal" data-target="#registrarModal"><i class="fa fa-plus" ></i> Nuevo Gasto</a>
@@ -24,7 +25,7 @@
             </div>
             </div>
             <div class="table-responsive">
-              <table class="table table-bordered">
+              <table class="table table-bordered" id="tablaGasto">
                 <thead class="text-center">
                   <tr>
                     <th>#</th>
@@ -32,7 +33,7 @@
                     <th>DESCRIPCION</th>
                     <th>MONTO</th>
                     <th></th>
-                    <th>ACCIONES</th>
+                    <th>ACCION</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -62,5 +63,6 @@
     </main>
     <?php include("./Modal/gasto_modal.php"); ?> 
     <?php include("./Modal/tipo_gasto_modal.php"); ?> 
-    <?php include("./plantilla/footer.php"); ?> 
+    <?php include("./plantilla/footer.php");?>
 
+    <?php };?>
