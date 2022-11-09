@@ -7,7 +7,7 @@ class GlobalControlador extends Conexion{
     {
         parent::__construct();
     }
-    public function indexSelec($nombreTabla){
+    public function seleccionarTodos($nombreTabla){
         $sentencia = $this->conexion->prepare("SELECT * FROM '$nombreTabla'");
         $sentencia->execute();
         $registros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
@@ -20,6 +20,7 @@ class GlobalControlador extends Conexion{
         $registros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
         return $registros;
     }
+    
     public function eliminar($sql){
         $sentencia = $this->conexion->prepare($sql);
         $sentencia->execute();

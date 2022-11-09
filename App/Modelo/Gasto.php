@@ -11,7 +11,7 @@ use  App\Controlador\GlobalControlador;
     if(isset($_POST['guardar'])){
         $nombre = $_POST['nombre'];
         $registrar = $consulta->index("INSERT INTO `tipo_gasto` (`id`, `nombre`, `estado`, `created_at`, `updated_at`) VALUES (NULL, '$nombre', '1', current_timestamp(), current_timestamp()) ");
-        header("location:../../gasto.php");
+        header("location:../../gasto");
     }
 
 
@@ -20,7 +20,7 @@ use  App\Controlador\GlobalControlador;
         $descripcion = $_POST['descripcion'];
         $monto = $_POST['monto'];
         $registrar = $consulta->index("INSERT INTO `gasto` (`id`, `id_tipo_gasto`, `descripcion`, `monto_gasto`, `estado`, `created_at`, `updated_at`) VALUES (NULL, '$tipoGasto', '$descripcion', '$monto', '1', current_timestamp(), current_timestamp()) ");
-        header("location:../../gasto.php");
+        header("location:../../gasto");
     }
 
     // ACTUALIZAR LOS DATOS DE GASTO
@@ -30,14 +30,14 @@ use  App\Controlador\GlobalControlador;
         $descripcion = $_POST['descripcion'];
         $monto = $_POST['monto'];
         $registrar = $consulta->index("UPDATE `gasto` SET `id_tipo_gasto` = '$tipoGasto', `descripcion` = '$descripcion', `monto_gasto` = '$monto' WHERE `gasto`.`id` = $idGasto; ");
-        header("location:../../gasto.php");
+        header("location:../../gasto");
     }
 
     // DAR DE BAJA AL DATO DE GASTO
     if(isset($_GET['eliminar'])){
         $id = $_GET['eliminar'];
         $registrar = $consulta->eliminar("UPDATE gasto SET estado=0 WHERE id=$id");
-        header("location:../../gasto.php");
+        header("location:../../gasto");
     }
 ?>
 

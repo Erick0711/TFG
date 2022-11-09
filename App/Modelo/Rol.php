@@ -1,7 +1,7 @@
 <?php 
 require($_SERVER['DOCUMENT_ROOT']."/TFG/autoload.php");
-use  App\Controlador\GlobalControlador;
-    $consulta = new GlobalControlador();
+use  App\Controlador\RolControlador;
+    $consulta = new RolControlador();
 
     if(isset($_POST['iniciarSesion'])){
         $usuario = $_POST['usuario'];
@@ -25,17 +25,17 @@ use  App\Controlador\GlobalControlador;
             header("Location: ../../");
         }
         if($_SESSION['nombre_rol'] == "Administrador"){
-            header("Location: ../../gasto.php");
+            header("Location: ../../");
         }
 
     }else{
         echo "USUARIO NO EXISTENTE";
     }
     }else{
-        header("Location: ../../login.php");
+        header("Location: ../../login");
     }
 }else{
-    header("Location: ../../login.php");
+    header("Location: ../../login");
 }
 ?>
 
